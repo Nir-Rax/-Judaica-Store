@@ -1,0 +1,24 @@
+title: Your Site Title
+description: Your site description
+baseurl: "/-Judaica-Store" # the subpath of your site, e.g. /blog
+url: "https://nir-rax.github.io/-Judaica-Store/" # the base hostname & protocol for your site, e.g. http://example.com
+
+# Build settings
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Exclude files from processing
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
