@@ -23,3 +23,9 @@ tmp/
 
 # Package-lock.json
 package-lock.json
+
+# angular cache
+.angular/
+
+# bolt cache
+.bolt/
