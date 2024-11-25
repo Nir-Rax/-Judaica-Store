@@ -1,9 +1,9 @@
-import { Component, HostListener } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router';
+import { Component, HostListener } from "@angular/core";
+import { CommonModule } from "@angular/common";
+import { RouterModule } from "@angular/router";
 
 @Component({
-  selector: 'app-header',
+  selector: "app-header",
   standalone: true,
   imports: [CommonModule, RouterModule],
   template: `
@@ -26,115 +26,117 @@ import { RouterModule } from '@angular/router';
       </div>
     </header>
   `,
-  styles: [`
-    header {
-      position: fixed;
-      top: 0;
-      right: 0;
-      left: 0;
-      z-index: 1000;
-      background: transparent;
-      transition: all 0.3s ease;
-      height: 80px;
-      display: flex;
-      align-items: center;
-    }
-
-    header.scrolled {
-      background: white;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    }
-
-    header.scrolled .logo,
-    header.scrolled .nav-links a {
-      color: var(--primary-color);
-    }
-
-    nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      width: 100%;
-    }
-
-    .logo {
-      font-family: 'Frank Ruhl Libre', serif;
-      font-size: 1.5rem;
-      font-weight: bold;
-      color: var(--secondary-color);
-      transition: color 0.3s ease;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 2rem;
-    }
-
-    .nav-links a {
-      color: var(--secondary-color);
-      text-decoration: none;
-      font-weight: 500;
-      transition: color 0.3s ease;
-      cursor: pointer;
-    }
-
-    .nav-links a:hover {
-      color: var(--accent-color);
-    }
-
-    .mobile-menu {
-      display: none;
-      background: none;
-      border: none;
-      cursor: pointer;
-    }
-
-    .mobile-menu span {
-      display: block;
-      width: 25px;
-      height: 3px;
-      background: var(--secondary-color);
-      margin: 5px 0;
-      transition: 0.3s;
-    }
-
-    header.scrolled .mobile-menu span {
-      background: var(--primary-color);
-    }
-
-    @media (max-width: 768px) {
-      .nav-links {
-        display: none;
-        position: absolute;
-        top: 100%;
+  styles: [
+    `
+      header {
+        position: fixed;
+        top: 0;
         right: 0;
         left: 0;
-        background: white;
-        padding: 1rem;
-        flex-direction: column;
-        text-align: center;
+        z-index: 1000;
+        background: transparent;
+        transition: all 0.3s ease;
+        height: 80px;
+        display: flex;
+        align-items: center;
       }
 
-      .nav-links.active {
+      header.scrolled {
+        background: rgba(206, 200, 200);
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      header.scrolled .logo,
+      header.scrolled .nav-links a {
+        color: var(--primary-color);
+      }
+
+      nav {
         display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+      }
+
+      .logo {
+        font-family: "Frank Ruhl Libre", serif;
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: var(--secondary-color);
+        transition: color 0.3s ease;
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 2rem;
       }
 
       .nav-links a {
-        color: var(--primary-color);
-        padding: 0.5rem 0;
+        color: var(--secondary-color);
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.3s ease;
+        cursor: pointer;
+      }
+
+      .nav-links a:hover {
+        color: var(--accent-color);
       }
 
       .mobile-menu {
-        display: block;
+        display: none;
+        background: none;
+        border: none;
+        cursor: pointer;
       }
-    }
-  `]
+
+      .mobile-menu span {
+        display: block;
+        width: 25px;
+        height: 3px;
+        background: var(--secondary-color);
+        margin: 5px 0;
+        transition: 0.3s;
+      }
+
+      header.scrolled .mobile-menu span {
+        background: var(--primary-color);
+      }
+
+      @media (max-width: 768px) {
+        .nav-links {
+          display: none;
+          position: absolute;
+          top: 100%;
+          right: 0;
+          left: 0;
+          background: rgba(206, 200, 200);
+          padding: 1rem;
+          flex-direction: column;
+          text-align: center;
+        }
+
+        .nav-links.active {
+          display: flex;
+        }
+
+        .nav-links a {
+          color: var(--primary-color);
+          padding: 0.5rem 0;
+        }
+
+        .mobile-menu {
+          display: block;
+        }
+      }
+    `,
+  ],
 })
 export class HeaderComponent {
   isScrolled = false;
   isMenuOpen = false;
 
-  @HostListener('window:scroll')
+  @HostListener("window:scroll")
   onWindowScroll() {
     this.isScrolled = window.scrollY > 50;
   }
@@ -152,9 +154,9 @@ export class HeaderComponent {
 
       window.scrollTo({
         top: offsetPosition,
-        behavior: 'smooth'
+        behavior: "smooth",
       });
-      
+
       // Close mobile menu after clicking
       this.isMenuOpen = false;
     }

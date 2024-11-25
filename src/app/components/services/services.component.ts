@@ -1,6 +1,5 @@
 import { Component } from "@angular/core";
 import { CommonModule } from "@angular/common";
-import { environment } from "src/environments/environment";
 
 @Component({
   selector: "app-services",
@@ -14,8 +13,7 @@ import { environment } from "src/environments/environment";
         <!-- STaM Services -->
         <h3 class="category-title">שירותי סת״ם</h3>
         <div class="services-grid">
-          <div class="service-card torah-scroll" [style.backgroundImage]="'url(' + imageUrl_TorahScroll + ')'">
-            >
+          <div class="service-card torah-scroll">
             <div class="bg-image"></div>
             <div class="content">
               <h3>ספרי תורה</h3>
@@ -26,7 +24,7 @@ import { environment } from "src/environments/environment";
               </ul>
             </div>
           </div>
-          <div class="service-card tefillin" [style.backgroundImage]="'url(' + imageUrl_Tefillin + ')'">
+          <div class="service-card tefillin">
             <div class="bg-image"></div>
             <div class="content">
               <h3>תפילין</h3>
@@ -37,7 +35,7 @@ import { environment } from "src/environments/environment";
               </ul>
             </div>
           </div>
-          <div class="service-card mezuzah" [style.backgroundImage]="'url(' + imageUrl_Mezuzah + ')'">
+          <div class="service-card mezuzah">
             <div class="bg-image"></div>
             <div class="content">
               <h3>מזוזות</h3>
@@ -57,7 +55,7 @@ import { environment } from "src/environments/environment";
             <!-- Prayer Items -->
             <h3 class="category-title">תשמישי תפילה</h3>
             <div class="services-grid">
-              <div class="service-card tallit" [style.backgroundImage]="'url(' + imageUrl_Tallit + ')'">
+              <div class="service-card tallit">
                 <div class="bg-image"></div>
                 <div class="content">
                   <h3>טליתות</h3>
@@ -68,7 +66,7 @@ import { environment } from "src/environments/environment";
                   </ul>
                 </div>
               </div>
-              <div class="service-card kippah" [style.backgroundImage]="'url(' + imageUrl_Kippah + ')'">
+              <div class="service-card kippah">
                 <div class="bg-image"></div>
                 <div class="content">
                   <h3>כיפות</h3>
@@ -79,7 +77,7 @@ import { environment } from "src/environments/environment";
                   </ul>
                 </div>
               </div>
-              <div class="service-card siddur" [style.backgroundImage]="'url(' + imageUrl_Siddur + ')'">
+              <div class="service-card siddur">
                 <div class="bg-image"></div>
                 <div class="content">
                   <h3>סידורים</h3>
@@ -95,7 +93,7 @@ import { environment } from "src/environments/environment";
             <!-- Holiday Items -->
             <h3 class="category-title">חפצי חג ושבת</h3>
             <div class="services-grid">
-              <div class="service-card shabbat" [style.backgroundImage]="'url(' + imageUrl_Shabbat + ')'">
+              <div class="service-card shabbat">
                 <div class="bg-image"></div>
                 <div class="content">
                   <h3>תשמישי שבת</h3>
@@ -106,7 +104,7 @@ import { environment } from "src/environments/environment";
                   </ul>
                 </div>
               </div>
-              <div class="service-card holidays" [style.backgroundImage]="'url(' + imageUrl_Holidays + ')'">
+              <div class="service-card holidays">
                 <div class="bg-image"></div>
                 <div class="content">
                   <h3>מוצרי חגים</h3>
@@ -117,7 +115,7 @@ import { environment } from "src/environments/environment";
                   </ul>
                 </div>
               </div>
-              <div class="service-card kitchenware" [style.backgroundImage]="'url(' + imageUrl_Kitchenware + ')'">
+              <div class="service-card kitchenware">
                 <div class="bg-image"></div>
                 <div class="content">
                   <h3>כלי מטבח</h3>
@@ -133,7 +131,7 @@ import { environment } from "src/environments/environment";
             <!-- Jewelry and Art -->
             <h3 class="category-title">תכשיטים ואומנות</h3>
             <div class="services-grid">
-              <div class="service-card jewelry" [style.backgroundImage]="'url(' + imageUrl_Jewelry + ')'">
+              <div class="service-card jewelry">
                 <div class="bg-image"></div>
                 <div class="content">
                   <h3>תכשיטים</h3>
@@ -144,7 +142,7 @@ import { environment } from "src/environments/environment";
                   </ul>
                 </div>
               </div>
-              <div class="service-card art" [style.backgroundImage]="'url(' + imageUrl_Art + ')'">
+              <div class="service-card art">
                 <div class="bg-image"></div>
                 <div class="content">
                   <h3>אומנות</h3>
@@ -155,7 +153,7 @@ import { environment } from "src/environments/environment";
                   </ul>
                 </div>
               </div>
-              <div class="service-card books" [style.backgroundImage]="'url(' + imageUrl_Books + ')'">
+              <div class="service-card books">
                 <div class="bg-image"></div>
                 <div class="content">
                   <h3>ספרים ומוזיקה</h3>
@@ -175,7 +173,7 @@ import { environment } from "src/environments/environment";
   styles: [
     `
       .services {
-        padding: 5rem 0;
+        padding: 3rem 0;
         background-color: var(--secondary-color);
       }
 
@@ -256,44 +254,42 @@ import { environment } from "src/environments/environment";
       }
 
       /* Background images for all cards */
-      /*
       .torah-scroll .bg-image {
-        background-image: url(this.imageUrl_TorahScroll);
+        background-image: url("/judaica-store/assets/images/torah-scroll.jpg");
       }
       .tefillin .bg-image {
-        background-image: url(this.imageUrl_Tefillin);
+        background-image: url("/judaica-store/assets/images/tefillin.jpg");
       }
       .mezuzah .bg-image {
-        background-image: url(this.imageUrl_Mezuzah);
+        background-image: url("/judaica-store/assets/images/mezuzah.jpg");
       }
       .tallit .bg-image {
-        background-image: url(this.imageUrl_Tallit);
+        background-image: url("/judaica-store/assets/images/tallit.jpg");
       }
       .kippah .bg-image {
-        background-image: url(this.imageUrl_Kippah);
+        background-image: url("/judaica-store/assets/images/kippah.jpg");
       }
       .siddur .bg-image {
-        background-image: url(this.imageUrl_Siddur);
+        background-image: url("/judaica-store/assets/images/siddur.jpg");
       }
       .shabbat .bg-image {
-        background-image: url(this.imageUrl_Shabbat);
+        background-image: url("/judaica-store/assets/images/shabbat.jpg");
       }
       .holidays .bg-image {
-        background-image: url(this.imageUrl_Holidays);
+        background-image: url("/judaica-store/assets/images/holidays.jpg");
       }
       .kitchenware .bg-image {
-        background-image: url(this.imageUrl_Kitchenware);
+        background-image: url("/judaica-store/assets/images/kitchenware.jpg");
       }
       .jewelry .bg-image {
-        background-image: url(this.imageUrl_Jewelry);
+        background-image: url("/judaica-store/assets/images/jewelry.jpg");
       }
       .art .bg-image {
-        background-image: url(this.imageUrl_Art);
+        background-image: url("/judaica-store/assets/images/art.jpg");
       }
       .books .bg-image {
-        background-image: url(this.imageUrl_Books);
+        background-image: url("/assets/images/books.jpg");
       }
-      */
 
       .content {
         position: relative;
@@ -307,7 +303,7 @@ import { environment } from "src/environments/environment";
       }
 
       .service-card h3 {
-        font-size: 1.5rem;
+        font-size: 3.25rem;
         margin-bottom: 1rem;
         text-align: center;
         color: var(--secondary-color);
@@ -316,7 +312,7 @@ import { environment } from "src/environments/environment";
       .service-card ul {
         list-style: none;
         padding: 0;
-        font-size: 1rem;
+        font-size: 1.25rem;
       }
 
       .service-card li {
@@ -334,15 +330,15 @@ import { environment } from "src/environments/environment";
 
       @media (max-width: 768px) {
         .service-card {
-          height: 262.5px;
+          height: 220px;
         }
 
         .service-card h3 {
-          font-size: 1.3rem;
+          font-size: 2rem;
         }
 
         .service-card ul {
-          font-size: 0.9rem;
+          font-size: 1.2rem;
         }
 
         .category-title {
@@ -353,23 +349,4 @@ import { environment } from "src/environments/environment";
     `,
   ],
 })
-export class ServicesComponent {
-  protected baseImagePath = `url('${environment.production ? "/judaica-store/assets/images/" : "/assets/images/"}')`;
-
-  // protected getImagePath(imageName: string): string {
-  //   return `${this.baseImagePath}${imageName}`;
-  // }
-
-  protected imageUrl_TorahScroll = environment.production ? "/judaica-store/assets/images/torah-scroll.jpg" : "/assets/images/torah-scroll.jpg";
-  protected imageUrl_Tefillin = environment.production ? "/judaica-store/assets/images/tefillin.jpg" : "/assets/images/tefillin.jpg";
-  protected imageUrl_Mezuzah = environment.production ? "/judaica-store/assets/images/mezuzah.jpg" : "/assets/images/mezuzah.jpg";
-  protected imageUrl_Tallit = environment.production ? "/judaica-store/assets/images/tallit.jpg" : "/assets/images/tallit.jpg";
-  protected imageUrl_Kippah = environment.production ? "/judaica-store/assets/images/kippah.jpg" : "/assets/images/kippah.jpg";
-  protected imageUrl_Siddur = environment.production ? "/judaica-store/assets/images/siddur.jpg" : "/assets/images/siddur.jpg";
-  protected imageUrl_Shabbat = environment.production ? "/judaica-store/assets/images/shabbat.jpg" : "/assets/images/shabbat.jpg";
-  protected imageUrl_Holidays = environment.production ? "/judaica-store/assets/images/holidays.jpg" : "/assets/images/holidays.jpg";
-  protected imageUrl_Kitchenware = environment.production ? "/judaica-store/assets/images/kitchenware.jpg" : "/assets/images/kitchenware.jpg";
-  protected imageUrl_Jewelry = environment.production ? "/judaica-store/assets/images/jewelry.jpg" : "/assets/images/jewelry.jpg";
-  protected imageUrl_Art = environment.production ? "/judaica-store/assets/images/art.jpg" : "/assets/images/art.jpg";
-  protected imageUrl_Books = environment.production ? "/judaica-store/assets/images/books.jpg" : "/assets/images/books.jpg";
-}
+export class ServicesComponent {}
