@@ -1,2 +1,2 @@
-# -Judaica-Store
+# Judaica-Store
 A website for a Judaica store
