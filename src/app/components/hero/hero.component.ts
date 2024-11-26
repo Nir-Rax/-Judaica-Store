@@ -21,7 +21,7 @@ import { CommonModule } from "@angular/common";
   styles: [
     `
       .hero {
-        height: 45vh;
+        height: 50vh;
         background: url("/judaica-store/assets/images/judaica-bg.jpg");
         background-size: cover;
         background-position: center;
@@ -45,7 +45,7 @@ import { CommonModule } from "@angular/common";
         color: var(--secondary-color);
         text-align: center;
         max-width: 800px;
-        margin: 80px auto 0;
+        margin: 120px auto 0;
         padding: 2rem;
       }
 

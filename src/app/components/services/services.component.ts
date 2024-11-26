@@ -213,7 +213,7 @@ import { CommonModule } from "@angular/common";
         border-radius: 8px;
         position: relative;
         overflow: hidden;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.9);
         transition: transform 0.3s ease;
         cursor: pointer;
       }
@@ -236,7 +236,7 @@ import { CommonModule } from "@angular/common";
         left: 0;
         right: 0;
         bottom: 0;
-        background: linear-gradient(to bottom, rgba(116, 101, 101, 0.7), rgba(116, 101, 101, 0.9));
+        background: linear-gradient(to bottom, rgba(116, 101, 101, 0.4), rgba(116, 101, 101, 0.9));
         transition: all 0.5s ease;
         z-index: 1;
       }
