@@ -7,10 +7,11 @@ import { CommonModule } from "@angular/common";
   imports: [CommonModule],
   template: `
     <section class="hero" id="home" dir="rtl">
+      <img src="/judaica-store/assets/logo.png" alt="Stam Judaica Logo" class="hero-logo" />
       <div class="overlay">
         <div class="container">
           <div class="hero-content">
-            <h1>עולם הסת״ם</h1>
+            <h1>לשם יחוד</h1>
             <p>אומנות קדושה בכתיבת ספרי תורה, תפילין ומזוזות</p>
             <button class="btn btn-primary" (click)="scrollToContact()">צור קשר עכשיו</button>
           </div>
@@ -103,6 +104,24 @@ import { CommonModule } from "@angular/common";
 
         p {
           font-size: 1.1rem;
+        }
+      }
+
+      .hero-logo {
+        position: absolute;
+        top: 7rem;
+        right: 2rem;
+        width: 180px;
+        height: auto;
+        opacity: 0.7;
+        z-index: 10;
+      }
+
+      @media (max-width: 768px) {
+        .hero-logo {
+          width: 115px;
+          top: 7rem;
+          right: 1rem;
         }
       }
     `,

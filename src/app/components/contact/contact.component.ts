@@ -16,13 +16,16 @@ import { faPhone, faEnvelope, faLocationDot, faClock } from "@fortawesome/free-s
             <div class="info-item">
               <fa-icon [icon]="locationIcon"></fa-icon>
               <h3>כתובת</h3>
-              <p>רחוב הרצל 15, אשקלון</p>
+              <p>
+                <a href="https://www.google.com/maps/search/?api=1&query=מבוא+ים+27+קרית+גת" target="_blank" rel="noopener noreferrer">רחוב מבוא ים 27, קרית גת</a>
+              </p>
+              <p>(מרכז מסחרי מעל השוק)</p>
             </div>
 
             <div class="info-item">
               <fa-icon [icon]="phoneIcon"></fa-icon>
               <h3>טלפון</h3>
-              <p><a href="tel:+972-8-123-4567" dir="ltr">08-123-4567</a></p>
+              <p><a href="tel:+972-8-123-4567" dir="ltr">053-942-2427</a></p>
             </div>
 
             <div class="info-item">
@@ -34,7 +37,7 @@ import { faPhone, faEnvelope, faLocationDot, faClock } from "@fortawesome/free-s
             <div class="info-item">
               <fa-icon [icon]="clockIcon"></fa-icon>
               <h3>שעות פתיחה</h3>
-              <p>ראשון-חמישי: 9:00-19:00</p>
+              <p>ראשון-חמישי: 9:00-18:00</p>
               <p>שישי: 9:00-13:00</p>
               <p>שבת: סגור</p>
             </div>
@@ -42,7 +45,7 @@ import { faPhone, faEnvelope, faLocationDot, faClock } from "@fortawesome/free-s
 
           <div class="map-container">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3390.8876411656584!2d34.57201!3d31.668800000000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzHCsDQwJzA3LjciTiAzNMKwMzQnMTkuMiJF!5e0!3m2!1sen!2sil!4v1637097345729!5m2!1sen!2sil"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3400.8475345575445!2d34.769260!3d31.606725!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzHCsDM2JzI0LjIiTiAzNMKwNDYnMTcuMiJF!5e0!3m2!1sen!2sil!4v1637097345729!5m2!1sen!2sil&q=מבוא+ים+27+קרית+גת"
               width="100%"
               height="400"
               style="border:0;"
@@ -113,6 +116,17 @@ import { faPhone, faEnvelope, faLocationDot, faClock } from "@fortawesome/free-s
 
       .info-item a:hover {
         color: var(--accent-color);
+      }
+
+      .info-item p a {
+        color: #666;
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+
+      .info-item p a:hover {
+        color: var(--accent-color);
+        text-decoration: underline;
       }
 
       .map-container {

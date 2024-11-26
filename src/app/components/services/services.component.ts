@@ -10,6 +10,12 @@ import { CommonModule } from "@angular/common";
       <div class="container">
         <h2>שירותי סת״ם ומוצרי יודאיקה</h2>
 
+        <div class="running-text-container">
+          <h3 class="category-title running-title">
+            <span>מכירת אותיות לספר תורה חדש ומהודר להצלחת עם ישראל וחיילי צה"ל הגיבורים ניתן לרכוש גם מילה, פסוק או עמוד שיהיה שלכם לנצח</span>
+          </h3>
+        </div>
+
         <!-- STaM Services -->
         <h3 class="category-title">שירותי סת״ם</h3>
         <div class="services-grid">
@@ -190,6 +196,18 @@ import { CommonModule } from "@angular/common";
         font-size: 1.8rem;
         margin: 4rem 0 2rem;
         position: relative;
+
+        &.running-title {
+          margin: 1rem 0 0rem;
+          color: gold;
+          font-family: "Frank Ruhl Libre", serif;
+          text-shadow: 0 0 10px rgba(255, 215, 0, 0.7);
+          background: linear-gradient(45deg, #37310b, #daa520);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+          font-weight: bold;
+        }
       }
 
       .category-title::after {
@@ -199,6 +217,10 @@ import { CommonModule } from "@angular/common";
         height: 3px;
         background-color: var(--accent-color);
         margin: 1rem auto 0;
+
+        &.running-title::after {
+          background-color: none;
+        }
       }
 
       .services-grid {
@@ -246,11 +268,11 @@ import { CommonModule } from "@angular/common";
       }
 
       .service-card:hover .bg-image {
-        transform: scale(1.1);
+        transform: scale(1.3);
       }
 
       .service-card:hover::before {
-        background: linear-gradient(to bottom, rgba(116, 101, 101, 0.8), rgba(116, 101, 101, 0.95));
+        background: linear-gradient(to bottom, rgba(116, 101, 101, 0.7), rgba(116, 101, 101, 0.85));
       }
 
       /* Background images for all cards */
@@ -288,7 +310,7 @@ import { CommonModule } from "@angular/common";
         background-image: url("/judaica-store/assets/images/art.jpg");
       }
       .books .bg-image {
-        background-image: url("/assets/images/books.jpg");
+        background-image: url("/judaica-store/assets/images/books.jpg");
       }
 
       .content {
@@ -343,7 +365,40 @@ import { CommonModule } from "@angular/common";
 
         .category-title {
           font-size: 1.5rem;
-          margin: 3rem 0 1.5rem;
+          margin: 0rem 0 1.5rem;
+        }
+      }
+
+      .running-text-container {
+        width: 100%;
+        overflow: hidden;
+        white-space: nowrap;
+        margin: 1rem 0;
+        border-radius: 10px;
+        background-color: #f1dece;
+      }
+
+      .running-title {
+        display: inline-block;
+        animation: runText 20s linear infinite, shiny-effect 3s infinite alternate;
+        padding-right: 100%;
+      }
+
+      @keyframes shiny-effect {
+        0% {
+          text-shadow: 0 0 5px rgba(255, 215, 0, 0.5);
+        }
+        100% {
+          text-shadow: 0 0 15px rgba(255, 215, 0, 0.9);
+        }
+      }
+
+      @keyframes runText {
+        0% {
+          transform: translateX(0%);
+        }
+        100% {
+          transform: translateX(100%);
         }
       }
     `,
